@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Codenvy Example</string>
-    <string name="hello">Hello android-application!</string>
+    <string name="app_name">FMN</string>
+    <string name="hello">Forget Me Nots</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">FMN 20190708a</string>
 
 </resources>
