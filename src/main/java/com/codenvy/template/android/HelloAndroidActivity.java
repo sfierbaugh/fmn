@@ -18,6 +18,7 @@ public class HelloAndroidActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button fmnButtonBackup = (Button) findViewById(R.id.fmn_button_backup);
     }
 
     @Override
