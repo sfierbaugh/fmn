@@ -3,6 +3,8 @@ package com.codenvy.template.android;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+//import android.view.OnClickListener;
+import android.widget.Button;
 
 public class HelloAndroidActivity extends Activity {
 
@@ -19,6 +21,11 @@ public class HelloAndroidActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button fmnButtonBackup = (Button) findViewById(R.id.fmn_button_backup);
+        fmnButtonBackup.setOnClickListener(new OnClickListener() {
+            public void onClick(View v{
+                // TODO
+            })
+        })
     }
 
     @Override
@@ -27,6 +34,22 @@ public class HelloAndroidActivity extends Activity {
         getMenuInflater().inflate(com.codenvy.template.android.R.menu.main, menu);
         return true;
     }
+    
+    /*
+    @Override
+    public void onClickButtonBackup(View v) {
+        
+    }
+    */
+   /*
+    Button fmn_button_backup = (Button) findViewById(R.id.fmn_button_backup);
+    fmn_button_backup.setOnClickListener(new OnClickListener() {
+        public void onClick(View v) {
+            // TODO Auto-generated method stub
+        }
+    }
+    */
+
 
 }
 
