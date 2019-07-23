@@ -3,8 +3,13 @@ package com.codenvy.template.android;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-//import android.view.OnClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.support;
+import android.support.design;
+import android.support.design.widget;
+import android.support.design.widget.Snackbar;
 
 public class HelloAndroidActivity extends Activity {
 
@@ -20,12 +25,14 @@ public class HelloAndroidActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
         Button fmnButtonBackup = (Button) findViewById(R.id.fmn_button_backup);
         fmnButtonBackup.setOnClickListener(new OnClickListener() {
-            public void onClick(View v{
+            public void onClick(View v) {
+                Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
                 // TODO
-            })
-        })
+            }
+        });
     }
 
     @Override
