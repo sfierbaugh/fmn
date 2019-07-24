@@ -26,12 +26,57 @@ public class HelloAndroidActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+     
+        // ...................
+        // Setup main buttons.
+        // ...................
         
+        // Backup button
         Button fmnButtonBackup = (Button) findViewById(R.id.fmn_button_backup);
         fmnButtonBackup.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(), R.string.app_name, Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.fmn_button_backup, Toast.LENGTH_LONG).show();
+                // TODO
+            }
+        });
+        
+        // Read button
+        Button fmnButtonRead = (Button) findViewById(R.id.fmn_button_read);
+        fmnButtonRead.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.fmn_button_read, Toast.LENGTH_LONG).show();
+                // TODO
+            }
+        });
+        
+        // Website button
+        Button fmnButtonWebsite = (Button) findViewById(R.id.fmn_button_website);
+        fmnButtonWebsite.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.fmn_button_website, Toast.LENGTH_LONG).show();
+                // TODO
+            }
+        });
+        
+        // Buy button
+        Button fmnButtonBuy = (Button) findViewById(R.id.fmn_button_buy);
+        fmnButtonBuy.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.fmn_button_buy, Toast.LENGTH_LONG).show();
+                // TODO
+            }
+        });
+        
+        // Settings button
+        Button fmnButtonSettings = (Button) findViewById(R.id.fmn_button_settings);
+        fmnButtonSettings.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.fmn_button_settings, Toast.LENGTH_LONG).show();
                 // TODO
             }
         });
@@ -43,22 +88,6 @@ public class HelloAndroidActivity extends Activity {
         getMenuInflater().inflate(com.codenvy.template.android.R.menu.main, menu);
         return true;
     }
-    
-    /*
-    @Override
-    public void onClickButtonBackup(View v) {
-        
-    }
-    */
-   /*
-    Button fmn_button_backup = (Button) findViewById(R.id.fmn_button_backup);
-    fmn_button_backup.setOnClickListener(new OnClickListener() {
-        public void onClick(View v) {
-            // TODO Auto-generated method stub
-        }
-    }
-    */
-
 
 }
 
