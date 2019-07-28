@@ -28,7 +28,6 @@ public class FmnMainActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fmn_main_activity_layout);
         Log.d("FmnMainActivity", "onCreate");
-        Toast.makeText(getApplicationContext(), "FmnMainActivity.onCreate", Toast.LENGTH_LONG).show();
      
         // ...................
         // Setup main buttons.

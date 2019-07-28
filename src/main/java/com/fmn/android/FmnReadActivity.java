@@ -10,7 +10,7 @@ import android.widget.Toast;
 import android.util.Log;
 //import com.fmn.android.R;
 
-public class FmnBackupActivity extends Activity {
+public class FmnReadActivity extends Activity {
 
     /**
      * Called when the activity is first created.
@@ -23,8 +23,8 @@ public class FmnBackupActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fmn_backup_activity_layout);
-        Log.d("FmnBackupActivity", "onCreate");        
+        setContentView(R.layout.fmn_read_activity_layout);
+        Log.d("FmnReadActivity", "onCreate");        
     }
 
     @Override
