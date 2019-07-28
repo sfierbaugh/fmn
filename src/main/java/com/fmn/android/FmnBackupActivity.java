@@ -8,7 +8,8 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 import android.util.Log;
-import com.codenvy.template.android.R;
+//import com.codenvy.template.android.R;
+import com.fmn.android.R;
 
 public class FmnBackupActivity extends Activity {
 
@@ -30,7 +31,7 @@ public class FmnBackupActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(com.codenvy.template.android.R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 

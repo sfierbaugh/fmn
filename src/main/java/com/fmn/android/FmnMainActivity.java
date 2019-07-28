@@ -1,4 +1,4 @@
-package com.codenvy.template.android;
+package com.fmn.android;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,9 +12,8 @@ import android.util.Log;
 //import android.support.design;
 //import android.support.design.widget;
 //import android.support.design.widget.Snackbar;
-import com.fmn.android.R;
 
-public class HelloAndroidActivity extends Activity {
+public class FmnMainActivity extends Activity{
 
     /**
      * Called when the activity is first created.
@@ -28,7 +27,7 @@ public class HelloAndroidActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.d("HelloAndroidActivity", "onCreate");
+        Log.d("FmnMainActivity", "onCreate");
      
         // ...................
         // Setup main buttons.
@@ -88,9 +87,9 @@ public class HelloAndroidActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(com.fmn.android.R.menu.main, menu);
         return true;
     }
 
-}
 
+}

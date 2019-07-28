@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">FMN 20190727a</string>
+    <string name="app_name">FMN 20190728a</string>
     <string name="hello">Forget Me Nots</string>
     <string name="action_settings">Settings</string>
 
@@ -10,5 +10,7 @@
     <string name="fmn_button_website">FMN.com</string>
     <string name="fmn_button_buy">Buy FMN</string>
     <string name="fmn_button_settings">Settings</string>
+    
+    <string name="fmn_activity_backup">Backup Planner</string>
 
 </resources>
