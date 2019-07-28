@@ -26,8 +26,9 @@ public class FmnMainActivity extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.fmn_main_activity_layout);
         Log.d("FmnMainActivity", "onCreate");
+        Toast.makeText(getApplicationContext(), "FmnMainActivity.onCreate", Toast.LENGTH_LONG).show();
      
         // ...................
         // Setup main buttons.
