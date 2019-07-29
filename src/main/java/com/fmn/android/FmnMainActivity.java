@@ -1,6 +1,7 @@
 package com.fmn.android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -37,9 +38,12 @@ public class FmnMainActivity extends Activity{
         Button fmnButtonBackup = (Button) findViewById(R.id.fmn_button_backup);
         fmnButtonBackup.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(), R.string.fmn_button_backup, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), R.string.fmn_button_backup, Toast.LENGTH_LONG).show();
                 // TODO
+				// Start NewActivity.class
+				Intent myIntent = new Intent(FmnMainActivity.this,
+						FmnBackupActivity.class);
+				startActivity(myIntent);
             }
         });
         
@@ -47,9 +51,12 @@ public class FmnMainActivity extends Activity{
         Button fmnButtonRead = (Button) findViewById(R.id.fmn_button_read);
         fmnButtonRead.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(), R.string.fmn_button_read, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), R.string.fmn_button_read, Toast.LENGTH_LONG).show();
                 // TODO
+				// Start NewActivity.class
+				Intent myIntent = new Intent(FmnMainActivity.this,
+						FmnReadActivity.class);
+				startActivity(myIntent);
             }
         });
         
@@ -57,7 +64,6 @@ public class FmnMainActivity extends Activity{
         Button fmnButtonWebsite = (Button) findViewById(R.id.fmn_button_website);
         fmnButtonWebsite.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(), R.string.fmn_button_website, Toast.LENGTH_LONG).show();
                 // TODO
             }
@@ -67,9 +73,12 @@ public class FmnMainActivity extends Activity{
         Button fmnButtonBuy = (Button) findViewById(R.id.fmn_button_buy);
         fmnButtonBuy.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(), R.string.fmn_button_buy, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), R.string.fmn_button_buy, Toast.LENGTH_LONG).show();
                 // TODO
+				// Start NewActivity.class
+				Intent myIntent = new Intent(FmnMainActivity.this,
+						FmnBuyActivity.class);
+				startActivity(myIntent);
             }
         });
         
@@ -77,7 +86,6 @@ public class FmnMainActivity extends Activity{
         Button fmnButtonSettings = (Button) findViewById(R.id.fmn_button_settings);
         fmnButtonSettings.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                //Snackbar.make(v, R.string.app_name, Snackbar.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(), R.string.fmn_button_settings, Toast.LENGTH_LONG).show();
                 // TODO
             }
