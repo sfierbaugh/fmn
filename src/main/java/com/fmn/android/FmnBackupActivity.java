@@ -8,6 +8,19 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 import android.util.Log;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.util.SparseArray;
+import android.widget.ImageView;
+import android.widget.TextView;
+//import com.google.android.gms.vision.Frame;
+//import com.google.android.gms.vision.barcode.Barcode;
+//import com.google.android.gms.vision.barcode.BarcodeDetector;
+import android.gms.vision.Frame;
+import android.gms.vision.barcode.Barcode;
+import android.gms.vision.barcode.BarcodeDetector;
 //import com.fmn.android.R;
 
 public class FmnBackupActivity extends Activity {
@@ -26,6 +39,20 @@ public class FmnBackupActivity extends Activity {
         setContentView(R.layout.fmn_backup_activity_layout);
         Log.d("FmnBackupActivity", "onCreate");        
     }
+
+    // TakePhoto button
+    Button fmnButtonTakePhoto = (Button) findViewById(R.id.fmn_button_takephoto);
+    fmnButtonTakePhoto.setOnClickListener(new OnClickListener() {
+        public void onClick(View v) {
+            //Toast.makeText(getApplicationContext(), R.string.fmn_button_backup, Toast.LENGTH_LONG).show();
+            // TODO
+            ImageView myImageView = (ImageView) findViewById(R.id.imgview);
+            Bitmap myBitmap = BitmapFactory.decodeResource(
+                                    getApplicationContext().getResources(), 
+                                    R.drawable.puppy);
+            myImageView.setImageBitmap(myBitmap);
+        }
+    });
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
