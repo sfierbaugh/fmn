@@ -10,6 +10,7 @@
     <string name="fmn_button_website">FMN.com</string>
     <string name="fmn_button_buy">Buy FMN</string>
     <string name="fmn_button_settings">Settings</string>
+    <string name="fmn_button_takephoto">Backup</string>
     
     <string name="fmn_activity_backup">Backup Planner</string>
     <string name="fmn_activity_read">Browse Planner</string>

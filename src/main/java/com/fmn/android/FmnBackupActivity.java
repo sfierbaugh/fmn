@@ -44,12 +44,12 @@ public class FmnBackupActivity extends Activity {
     Button fmnButtonTakePhoto = (Button) findViewById(R.id.fmn_button_takephoto);
     fmnButtonTakePhoto.setOnClickListener(new OnClickListener() {
         public void onClick(View v) {
-            //Toast.makeText(getApplicationContext(), R.string.fmn_button_backup, Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), R.string.fmn_button_takephoto, Toast.LENGTH_LONG).show();
             // TODO
-            ImageView myImageView = (ImageView) findViewById(R.id.imgview);
+            ImageView myImageView = (ImageView) findViewById(R.id.fmn_imageview);
             Bitmap myBitmap = BitmapFactory.decodeResource(
                                     getApplicationContext().getResources(), 
-                                    R.drawable.puppy);
+                                    R.drawable.bb74793e6b39106b);
             myImageView.setImageBitmap(myBitmap);
         }
     });
