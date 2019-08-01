@@ -11,7 +11,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/fmn_activity_backup"
-    android:id="@+id/txtContent/>
+    android:id="@+id/txtContent"/>
     
 <Button
     android:id="@+id/fmn_button_takephoto"
