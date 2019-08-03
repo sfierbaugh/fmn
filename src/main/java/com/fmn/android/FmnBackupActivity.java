@@ -38,45 +38,46 @@ public class FmnBackupActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fmn_backup_activity_layout);
         Log.d("FmnBackupActivity", "onCreate");        
+
+        // TakePhoto button
+        Button fmnButtonTakePhoto = (Button) findViewById(R.id.fmn_button_takephoto);
+        fmnButtonTakePhoto.setOnClickListener(new OnClickListener() {
+            public void onClick(View v) {
+                //Toast.makeText(getApplicationContext(), R.string.fmn_button_takephoto, Toast.LENGTH_LONG).show();
+                // TODO
+    
+                // Get the TextView for status
+                TextView txtView = (TextView) findViewById(R.id.txtContent);
+                
+                // Get the image
+                ImageView myImageView = (ImageView) findViewById(R.id.fmn_imageview);
+                Bitmap myBitmap = BitmapFactory.decodeResource(
+                                        getApplicationContext().getResources(), 
+                                        R.drawable.bb74793e6b39106b);
+                myImageView.setImageBitmap(myBitmap);
+                
+                // Setup the barcode detector
+                BarcodeDetector detector = 
+                    new BarcodeDetector.Builder(getApplicationContext())
+                                        .setBarcodeFormats(Barcode.DATA_MATRIX | Barcode.QR_CODE)
+                                        .build();
+                if(!detector.isOperational()){
+                   txtView.setText("Could not set up the detector!");
+                   return;
+                }
+                
+                // Detect the barcode(s)
+                Frame frame = new Frame.Builder().setBitmap(myBitmap).build();
+                SparseArray<Barcode> barcodes = detector.detect(frame);
+    
+                // Do something with the barcode(s)
+                Barcode thisCode = barcodes.valueAt(0);
+                txtView.setText(thisCode.rawValue);
+    
+            }
+        });
     }
 
-    // TakePhoto button
-    Button fmnButtonTakePhoto = (Button) findViewById(R.id.fmn_button_takephoto);
-    fmnButtonTakePhoto.setOnClickListener(new OnClickListener() {
-        public void onClick(View v) {
-            //Toast.makeText(getApplicationContext(), R.string.fmn_button_takephoto, Toast.LENGTH_LONG).show();
-            // TODO
-
-            // Get the TextView for status
-            TextView txtView = (TextView) findViewById(R.id.txtContent);
-            
-            // Get the image
-            ImageView myImageView = (ImageView) findViewById(R.id.fmn_imageview);
-            Bitmap myBitmap = BitmapFactory.decodeResource(
-                                    getApplicationContext().getResources(), 
-                                    R.drawable.bb74793e6b39106b);
-            myImageView.setImageBitmap(myBitmap);
-            
-            // Setup the barcode detector
-            BarcodeDetector detector = 
-                new BarcodeDetector.Builder(getApplicationContext())
-                                    .setBarcodeFormats(Barcode.DATA_MATRIX | Barcode.QR_CODE)
-                                    .build();
-            if(!detector.isOperational()){
-               txtView.setText("Could not set up the detector!");
-               return;
-            }
-            
-            // Detect the barcode(s)
-            Frame frame = new Frame.Builder().setBitmap(myBitmap).build();
-            SparseArray<Barcode> barcodes = detector.detect(frame);
-
-            // Do something with the barcode(s)
-            Barcode thisCode = barcodes.valueAt(0);
-            txtView.setText(thisCode.rawValue);
-
-        }
-    });
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
