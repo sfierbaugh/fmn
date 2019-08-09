@@ -36,6 +36,16 @@
             <groupId>com.google.android.gms.vision.barcode.BarcodeDetector</groupId>
         </dependency>
         -->
+        
+        <dependency>
+            <groupId>com.google.code.play2-maven-plugin</groupId>
+            <artifactId>play2</artifactId>
+            <version>1.0.0-rc5</version>
+            <!--
+            <scope>import</scope>
+            -->
+        </dependency>
+        
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
