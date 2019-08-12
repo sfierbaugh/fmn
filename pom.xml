@@ -69,6 +69,13 @@
                     </sdk>
                 </configuration>
             </plugin>
+            <!-->
+            <plugin>
+                <name>Play! 2.x Maven Plugin</name>
+                <prefix>play2</prefix>
+                <artifactId>play2-maven-plugin</artifactId>
+            </plugin>
+            -->
         </plugins>
     </build>
 </project>
